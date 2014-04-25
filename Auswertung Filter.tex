@@ -49,6 +49,25 @@ Eine kleine Veranschaulichung wie Eingangs- und Ausgangssignal aussehen können 
 \end{figure}
 
 
+\subsubsection*{Dämpfung 2,5}
+
+Bei diesen Ausdruck entspricht $\unit[10]{mm} = \unit[25]{Skalenteilen}$, zusammen mit der Umrechnungsformel von Skalenteilen in $ms$ kommen wir auf folgende Formel:
+
+\begin{align*}
+\unit[T_x]{[ms]} &= \frac{ \frac{10}{25} \cdot \Delta \text{mm} \cdot 2}{5}
+\end{align*}
+
+Damit berechnen wir nun alle geforderten Zeiten:
+
+\begin{align*}
+&\text{Verzugszeit}:  &&T_u = \frac{ \frac{10}{25} \cdot \unit[2]{mm} \cdot 2}{5} = \unit[0,32]{ms} \\
+&\text{Ausgleichszeit}:  &&T_g = \frac{ \frac{10}{25} \cdot \unit[7]{mm} \cdot 2}{5} = \unit[1,12]{ms} \\
+&\text{Einschwingzeit}:  &&T_e = \frac{ \frac{10}{25} \cdot \unit[39]{mm} \cdot 2}{5} = \unit[6,24]{ms} \\
+&\text{Anschwingzeit}:  &&T_a = \frac{ \frac{10}{25} \cdot \unit[8]{mm} \cdot 2}{5} = \unit[1,28]{ms} \\
+&\text{Halbwertszeit}:  &&T_h = \frac{ \frac{10}{25} \cdot \unit[6]{mm} \cdot 2}{5} = \unit[0,96]{ms} \\
+&\text{Überschwingweite (abgelesen)}:  &&v_m = 1,77 - 1,36 = \unit[0,41]{V} \\
+&\text{Übertragungsbeiwert}:  &&K = \frac{\text{Beharrungswert}}{\text{Eingangssignal}} = \frac{\unit[1,36]{V}}{\unit[1]{V}} = \unit[1,36]{ } \\
+\end{align*}
 \section{Versuch Filter 2}
 
 
