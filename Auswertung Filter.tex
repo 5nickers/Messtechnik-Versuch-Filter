@@ -26,7 +26,6 @@ Das Antwortsignal ist eine abschwellende Schwingung , das bei 4475 seinen ersten
 
 \subsubsection*{Das Antwortsignal (Dämpfungsfaktor 8)}
 
-Bei einem Dämpfungsfaktor von 8 ist die Schwingung des Antwortsignals kaum noch zu erkennen, zudem ist der Zeitraum nachdem ein konstantes Signal erreicht wird, mit knapp 80 Skalenanteilen sehr viel kürzer als bei einer Dämpfung von 2,5. Diese Änderung führen wir auf den gesteigerten Dämpfungsfaktor zurück.
 Bei einem Dämpfungsfaktor von 8 ist die Schwingung des Antwortsignals kaum noch zu erkennen, zudem ist der Zeitraum nachdem ein konstantes Signal erreicht wird, mit knapp 80 Skalenanteilen sehr viel kürzer als bei einer Dämpfung von 2,5. Außerdem ist der Beharrungswert hier kleiner als das Eingangssignal. Diese Änderung führen wir auf den gesteigerten Dämpfungsfaktor zurück, der dafür sorgt, das die Anzahl der Schwingungen um den Beharrungswert zurückgeht und das Eingangssignal zusätzlich vermindert.
 
 
@@ -50,6 +49,9 @@ Eine kleine Veranschaulichung wie Eingangs- und Ausgangssignal aussehen können 
 \end{figure}
 
 
+\subsection{Auswertung der Ausdrucke}
+
+
 \subsubsection*{Dämpfung 2,5}
 
 Bei diesen Ausdruck entspricht $\unit[10]{mm} = \unit[25]{Skalenteilen}$, zusammen mit der Umrechnungsformel von Skalenteilen in $ms$ kommen wir auf folgende Formel:
@@ -69,8 +71,51 @@ Damit berechnen wir nun alle geforderten Zeiten:
 &\text{Überschwingweite (abgelesen)}:  &&v_m = 1,77 - 1,36 = \unit[0,41]{V} \\
 &\text{Übertragungsbeiwert}:  &&K = \frac{\text{Beharrungswert}}{\text{Eingangssignal}} = \frac{\unit[1,36]{V}}{\unit[1]{V}} = \unit[1,36]{ } \\
 \end{align*}
+
+
 \section{Versuch Filter 2}
 
+Bei diesen Ausdruck entspricht $\unit[16,5]{mm} = \unit[10]{Skalenteilen}$, zusammen mit der Umrechnungsformel von Skalenteilen in $ms$ kommen wir auf folgende Formel:
+
+\begin{align*}
+\unit[T_x]{[ms]} &= \frac{ \frac{16,5}{10} \cdot \Delta \text{mm} \cdot 2}{5}
+\end{align*}
+
+Damit berechnen wir nun alle geforderten Zeiten:
+
+\begin{align*}
+&\text{Verzugszeit}:  &&T_u = \frac{ \frac{16,5}{10} \cdot \unit[1]{mm} \cdot 2}{5} = \unit[0,66]{ms} \\
+&\text{Ausgleichszeit}:  &&T_g = \frac{ \frac{16,5}{10} \cdot \unit[42]{mm} \cdot 2}{5} = \unit[27,72]{ms} \\
+&\text{Einschwingzeit}:  &&T_e = \text{Nicht aus Diagramm ablesbar,da Dämpfung zu groß} \\
+&\text{Anschwingzeit}:  &&T_a = \frac{ \frac{16,5}{10} \cdot \unit[40]{mm} \cdot 2}{5} = \unit[26,4]{ms} \\
+&\text{Halbwertszeit}:  &&T_h = \frac{ \frac{16,5}{10} \cdot \unit[28]{mm} \cdot 2}{5} = \unit[18,48]{ms} \\
+&\text{Überschwingweite (abgelesen)}:  &&v_m = 0,77 - 0,79 = \unit[0,02]{V} \\
+&\text{Übertragungsbeiwert}:  &&K = \frac{\text{Beharrungswert}}{\text{Eingangssignal}} = \frac{\unit[0,77]{V}}{\unit[1]{V}} = \unit[0,77]{ } \\
+\end{align*}
+
+\hfill \\
+
+Nun eine Übersicht über die gewonnen Werte:
+
+\hfill \\
+
+\begin{tabular}{c|c|c}
+ & Dämpfung 2,5 & Dämpfung 8 \\ 
+\hline 
+Verzugszeit [ms] & 0,32 & 0,66 \\ 
+\hline 
+Ausgleichszeit [ms] & 1,12 & 27,72 \\ 
+\hline 
+Einschwingzeit [ms] & 6,24 & nicht ablesbar \\ 
+\hline 
+Anschwingzeit [ms] & 1,28 & 26,4 \\ 
+\hline 
+Halbwertszeit [ms] & 0,96 & 18,48 \\ 
+\hline 
+Überschwingweite [V] & 0,41 & 0,02 \\ 
+\hline 
+Übertragungsbeiwert & 1,36 & 0,77 \\ 
+\end{tabular} 
 
 
 \end{document}
